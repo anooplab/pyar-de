@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name='pyar-de',
     version='0.1',
-    packages=['src'],
+    packages=['pyar_de'],
     scripts=['scripts/pyar-de'],
     url='https://github.com/anooplab/pyar-de',
     license='GPL',
