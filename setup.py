@@ -5,7 +5,7 @@ setup(
     version='0,1',
     packages=['pyar-de'],
     scripts=['pyar-de']
-    url='',
+    url='https://github.com/anooplab/pyar-de',
     license='GPL',
     author='anoop',
     author_email='anoop@chem.iitkgp.ac.in',
