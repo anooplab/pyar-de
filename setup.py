@@ -4,7 +4,7 @@ setup(
     name='pyar-de',
     version='0.1',
     packages=['src'],
-    scripts=['pyar-de'],
+    scripts=['scripts/pyar-de'],
     url='https://github.com/anooplab/pyar-de',
     license='GPL',
     author='anoop',
