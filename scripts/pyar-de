@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+from pyar_de imporr run_de
+
 def main():
     import argparse
     program_description = """A program to do global optimization with
