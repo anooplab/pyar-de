@@ -173,15 +173,20 @@ def run_de(cla):
     cla.pop('n_iterations')
     arguments = (cla['atoms'], cla['charge'], cla["multiplicity"],
                  cla["keywords"], cla["extra_keywords"], cla["nprocs"])
+
     if os.path.exists('best_trj.xyz'):
         os.remove('best_trj.xyz')
+
+    if os.path.exists('best.xyz'):
+        os.remove('best.xyz')
 
     def coordinate_update(x, convergence):
         write_xyz(x, cla['atoms'], f"Convergence: {convergence}",
                   'best_trj.xyz')
 
-    result = de(objective_function, bounds, args=arguments,
+    result = de(objective_function, bounds, args=arguments, atol=1e-6,
                 polish=True, disp=True, callback=coordinate_update)
+
     print(result.message)
     final_energy = result.fun
     final_coordinates = result.x
